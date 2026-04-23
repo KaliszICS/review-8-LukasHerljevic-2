@@ -1,18 +1,18 @@
 public class PracticeProblem {
 
-	public static void main(String args[]) {
+	public static void main(String args[]) {}
 
 		public static String pluralize(String word) {
-    if (word.endsWith("ey")) {
+    if (word.toLowerCase().endsWith("ey")) {
         return "eys";
-    } else if (word.endsWith("y")) {
+    } else if (word.toLowerCase().endsWith("y")) {
         return "ies";
-    } else if (word.endsWith("ife")) {
+    } else if (word.toLowerCase().endsWith("ife")) {
         return "ives";
     } else {
-        return "s";
+        return "s";}
     }
-
+    
 	public static int min(int a, int b, int c) {
     if (a <= b && a <= c) {
         return a;
@@ -21,6 +21,23 @@ public class PracticeProblem {
     } else {
         return c;
     }
+    
+    }
+
+    public static boolean isLeapYear(int year) {
+    if (year % 4 == 0) { 
+        if (year % 100 == 0) { 
+            if (year % 400 == 0) { 
+                return true; 
+            } else {
+                return false; 
+            }
+        } else {
+            return true; 
+        }
+    } else {
+        return false; 
+    }
 }
 
 	} 
@@ -28,4 +45,4 @@ public class PracticeProblem {
 	
 	
 
-}
+
